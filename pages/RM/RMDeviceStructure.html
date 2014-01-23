@@ -1,0 +1,193 @@
+<div data-role="page" id='DevStructurePopup'>
+	<div data-role="header" data-theme="d" class="ui-corner-top ui-header ui-bar-d" role="banner">
+		<h2>Device Information</h2>
+	</div>
+			<div data-role="navbar" id="tabsDevInfo">
+				<ul id="ulDevice">
+					<li id="liDevice" style="width: auto;"><a href="#rmStructabs-1">Device</a></li>
+				</ul>
+			</div>
+			<div id='rmStructabs-1'>
+				<center>
+					<table>
+						<tr>
+							<td>Console Ip</td>
+							<td><input type='text' id='consoleIp'/></td>
+							<td>Management Ip</td>
+							<td><input type='text' id='MnagementIp'/></td>
+							<td>Host Name</td>
+							<td><input type='text' id='hostname'/></td>
+						</tr>
+						<tr>
+							<td>Software Version</td>
+							<td><input type='text' id='softwareVersion'/></td>
+							<td>Model Type</td>
+							<td><input type='text' id='modelType'</td>
+							<td>Device Type</td>
+							<td>
+								<select>
+									<option value=''></option>
+									<option value='Server'>Server</option>
+									<option value='Storage'>Storage</option>
+									<option value='SAN Switch'>SAN Switch</option>
+									<option value='Test Tool'>Test Tool</option>
+									<option value='Device'>Device</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<td>Description</td>
+							<td><input type='text' id='description'/></td>
+							<td>Manufacturer</td>
+							<td><input type='text' id='manufacturer'/></td>
+							<td>Serial Number</td>
+							<td><input type='text' id='serialNumber'/></td>
+						</tr>
+					</table>
+				</center>
+			</div>
+			<div data-role="navbar" id="tabsDevSlotPortInfo">
+				<ul id="ulDeviceSlotPort">
+					<li id="liDeviceSlotPort" style="width: auto;"><a href="#rmStructabs-1">Slot</a></li>
+				</ul>
+			</div>
+			<div id='rmStructabs-2'>
+				<center>
+					<table>
+						<tr>
+							<td><a id="rmButtonAddSlot" style="width:100px;" data-role="button" data-mini="true" data-rel="dialog" ><span id='rmSlot'>Add Slot</span></a>
+							</td>
+							<td><a id="rmButtonDeleteSlot" style="width:100px;" data-role="button" data-mini="true" data-rel="dialog" ><span id='rmDelSlot'>Delete Slot</span></a>
+							</td>
+						</tr>
+					</table>
+					<table>
+						<tr>
+							<td>Software Version</td>
+							<td><input type='text' id='softwareVersion2'/></td>
+							<td>Hardware Version</td>
+							<td><input type='text' id='hardwareVersion2'/></td>
+							<td>Number</td>
+							<td><input type='text' id='number'/></td>
+						</tr>
+						<tr>
+							<td>Serial Number</td>
+							<td><input type='text' id='serialNumber2'/></td>
+							<td>Product Number</td>
+							<td><input type='text' id='productNumber'/></td>
+							<td>Description</td>
+							<td><input type ='text' id='description2'/></td>
+						</tr>
+					</table>
+				</center>
+			</div>
+			<div data-role="navbar" id="tabsDevPortInfo">
+				<ul id="ulDevicePort">
+					<li id="liDevicePort" style="width: auto;"><a href="#rmStructabs-3">Port</a></li>
+				</ul>
+			</div>
+			<div id='rmStructabs-3'>
+				<center>
+					<table>
+						<tr>
+							<td><a id="rmButtonAddPort" style="width:100px;" data-role="button" data-mini="true" data-rel="dialog" ><span id='rmPort'>Add Port</span></a>
+							</td>
+							<td><a id="rmButtonDeletePort" style="width:100px;" data-role="button" data-mini="true" data-rel="dialog" ><span id='rmDelPort'>Delete Port</span></a>
+							</td>
+						</tr>
+					</table>
+					<table>
+						<tr>
+							<td>Duplexity</td>
+							<td><input type='text' id='duplexity'/></td>
+							<td>Bandwidth</td>
+							<td><input type='text' id='bandwidth'/></td>
+							<td>Number</td>
+							<td><input type='text' id='number2'/></td>
+						</tr>
+						<tr>
+							<td>Mtu</td>
+							<td><input type='text' id='mtu'/></td>
+							<td>Model</td>
+							<td><input type='text' id='model'/></td>
+							<td>Media Type</td>
+							<td><input type ='text' id='mediaType'/></td>
+						</tr>
+						<tr>
+							<td>Port Name</td>
+							<td><input type='text' id='portName'/></td>
+							<td>Speed</td>
+							<td><input type='text' id='speed'/></td>
+							<td>Hardware Version</td>
+							<td><input type ='text' id='hardwareVersion3'/></td>
+						</tr>
+						<tr>
+							<td>Description</td>
+							<td><input type='text' id='description4'/></td>
+						</tr>
+					</table>
+					<table>
+						<h3>Partner Port Information</h3>
+						<tr>
+							<td>Ip Address</td>
+							<td<input type='text' id='ipAddress'/></td>
+							<td>Slot Number</td>
+							<td>
+								<select>
+									<option value=''></option>
+								</select>
+							</td>
+							<td>Port Number</td>
+							<td>
+								<select>
+									<option value=''></option>
+								</select>
+							</td>
+						</tr>
+					</table>
+			</div>
+			<div data-role="navbar" id="tabsDevPortInfo">
+				<ul id="ulDevicePort">
+					<li id="liDevicePort" style="width: auto;"><a href="#rmStructabs-3">Pic</a></li>
+				</ul>
+			</div>
+			<div id='rmStructabs-4'>
+				<center>
+					<table>
+						<tr>
+							<td><a id="rmButtonAddPic" style="width:100px;" data-role="button" data-mini="true" data-rel="dialog" ><span id='rmPic'>Add Pic</span></a>
+							</td>
+							<td><a id="rmButtonDeletePic" style="width:100px;" data-role="button" data-mini="true" data-rel="dialog" ><span id='rmDelPic'>Delete Pic</span></a>
+							</td>
+						</tr>
+					</table>
+					<table>
+						<tr>
+							<td>Number</td>
+							<td><input type='text' id='Number4'/></td>
+							<td>Version</td>
+							<td><input type='text' id='version'/></td>
+							<td>Description</td>
+							<td><input type='text' id='description4'/></td>
+						</tr>
+						<tr>
+							<td>Assembly Id</td>
+							<td><input type='text' id='assemblyId'/></td>
+							<td>Pic Type</td>
+							<td><input type='text' id='picType'/></td>
+						</tr>
+					</table>
+				</div>
+				<table>
+						<tr>
+							<td><a id="rmButtonSave" style="width:100px;" data-role="button" data-mini="true" data-rel="dialog" ><span id='rmSave'>Save</span></a>
+							</td>
+							<td><a id="rmButtonCancel" style="width:100px;" data-role="button" data-mini="true" data-rel="dialog" ><span id='rmCancel'>Cancel</span></a>
+							</td>
+							<td><a id="rmButtonChangeStruc" style="width:100px;" data-role="button" data-mini="true" data-rel="dialog" ><span id='rmChangeStruc'>Change Device Structure</span></a>
+							</td>
+
+						</tr>
+				</table>
+
+</div>

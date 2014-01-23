@@ -1,0 +1,82 @@
+<div data-role="page" id="DeviceInformation" data-theme="a" ><!--margin-left: auto;margin-right: auto;">-->
+	<div data-role="header" data-theme="d">
+        <h1 style="">Device Information</h1>
+    </div>
+	<div data-role="navbar" id="tabsDevInfo">
+			<ul id="ulDevInfo">
+				<li id="liAuto" style="width: auto;"><a href="#rmtabs-1">Auto</a></li>
+				<li id="liManual" style="width: auto;"><a href="#rmtabs-2">Manual</a></li>
+			</ul>
+			<div id="rmtabs-1">
+                <div id="rmtab-01"  data-role="content" style="border-top-width: 0px; padding-top: 0px;">
+                   <center>
+					 <h3>Supply Chassis Information To Auto-generate Device Information.</h3>
+                    <table>
+                        <tr>
+                            <td id='chassisip'>Management IP:</td>
+                            <td><input type='text' id ='chassisIp' /></td>
+                            <td>Device Type</td>
+                            <td>
+                                <select id='devicetype2'>
+                                    <option value='empty'></option>
+                                    <option value='networkingdevice'>Networking Device</option>
+                                    <option value='testtool'>Test Tool</option>
+                                    <option value='l1switch'>L1 Switch</option>
+                                    <option value='l2switch'>L2 Switch</option>
+                                    <option value='terminalserver'>Terminal Server</option>
+                                </select>
+                            </td>
+                            <td>Manufacturer</td>
+                            <td>
+                                <select name='Action' id='devicetype'>
+                                    <option value=''></option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+							<td id='hostnamelabel' style='display:none;'>Host Name</td>
+							<td><input style='display:none;' type='text' id='hostname'/></td>
+                            <td>Username</td>
+                            <td><input type='text' id='addusername'/></td>
+                            <td>Password</td>
+                            <td><input type='password' id='password'/></td>
+                        </tr>
+						</center>
+						</table>
+						<center>
+						<table>
+							<tr>
+								<td>
+									<div data-role="fieldcontain">
+									 	<fieldset data-role="controlgroup">
+											<input type="checkbox" name="checkbox-1"  disabled='true' id="hasPartnerDevice" class="custom" />
+											<label for="hasPartnerDevice" style='width:500px;'>Include Partner Port</label>
+									    </fieldset>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td><a id="rmButtonAuto" style="width:100px;" data-role="button" data-mini="true" data-rel="dialog" ><span id='rmAuto'>Auto</span></a>
+								</td>
+							</tr>
+               			</table>
+					</center>
+                </div>
+            </div>
+			<div id="rmtabs-2" >
+           		 <div id="rmtab-02"  data-role="content" style="border-top-width: 0px; padding-top: 0px;">
+					<center>
+					<h3>Select Device Structure</h3>
+						<table border='1px;'>
+							<tr>
+								<td><a href="RMDeviceStructure.html" ><img style='width:200px;height:400px;' src='../../img/RM/DevPort.jpg'/></a></td>
+								<td><a href="RMDeviceStructure.html"><img style='width:200px;height:400px;' src='../../img/RM/DevSlotPort.jpg'/></a></td>
+								<td><a href="RMDeviceStructure.html"><img style='width:200px;height:400px;' src='../../img/RM/DevSlotModPort.jpg'/></a></td>
+								<td><a href="RMDeviceStructure.html"><img style='width:200px;height:400px;' src='../../img/RM/DevSlotPicPort.jpg'/></a></td>
+							</tr>
+						</table>
+					</center>
+			     </div>
+			</div>
+	</div>
+</div>

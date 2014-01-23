@@ -1,0 +1,42 @@
+	<div data-role="page" id="ReleaseDevice" data-theme="a">
+        <div data-role="header" data-theme="d" data-add-back-btn="true" data-position="fixed">
+            <h2>Release Device</h2>
+        </div>
+        <div data-role="content" data-theme="a">
+		<nav data-role="navbar" id='ReserveReleaseButtons' class="ui-navbar ui-mini" role="navigation">
+    <ul class="ui-grid-c">
+
+      <li class="ui-block-c" style='width:50%'><a href="ClearReleaseAll.html" id='ReserveReleaseAll' data-transition='pop' data-corners="false" data-shadow="false" data-iconshadow="true" data-wrapperels="span"  data-theme="a" data-inline="true"  style='height:40px;' ><span class="ui-btn-inner"><span style='padding-top:5px;' class="ui-btn-text">Release All</span><span class="ui-icon ui-icon-search ui-icon-shadow">&nbsp;</span></span></a></li>
+
+      <li class="ui-block-d" style='width:50%'><a href="RHistoryClear.html"  id='ReserveRelease' data-rel="dialog"  data-corners="false" data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-iconpos="top" data-theme="a" data-inline="true" style='height:40px;' ><span class="ui-btn-inner"><span class="ui-btn-text">Release</span><span class="ui-icon ui-icon-star ui-icon-shadow">&nbsp;</span></span></a></li>
+    </ul>
+  </nav>
+		<div style="float: left;margin-top:0.5em;">
+			<td>
+				<a id="rmReleaseSelectAll" style="width:100px;" data-role="button" data-mini="true" data-rel="dialog" ><span id='txtreservedSelectAll'>Select All</span></a>
+			</td>
+        	<span>Total Matches: <span id="totalMatchesRelease">0</span></span>
+        </div>
+		
+
+	<table data-role="table" id="RMReleaseDevice-table" data-mode="columntoggle" class="table-stroke ui-body-d ui-shadow ui-responsive" data-column-btn-theme="a" data-column-btn-text="Columns..." data-column-popup-theme="a" data-mini="true">
+  			<thead>
+    		<tr class="ui-bar-d">
+			    <th>Hostname</th>
+			    <th data-priority="1">Start Date</th>
+			    <th data-priority="1">Start Time</th>
+      			<th data-priority="2">User</th>
+				<th data-priority="3">Application</th>
+				<th data-priority="6">Interval</th>
+				<th data-priority="6">Iteration</th>
+				<th data-priority="6">Iteration No.</th>
+				<th data-priority="1">End Date</th>
+				<th data-priority="1">End Time</th>
+				<th data-priority="6">Status</th>
+			</tr>
+		  	</thead>
+			<tbody>
+			</tbody>
+		</table>
+
+        </div>

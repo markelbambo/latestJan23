@@ -1,0 +1,183 @@
+<div data-role="page" id="RMDevices" data-theme="a">
+
+	<!-- header -->
+    <div id="header" data-role="header" data-theme="d" data-add-back-btn="true" data-position="fixed">
+		<h1 class="ui-title" role="heading">Resource Management</h1>
+    </div>
+	<div data-role="content" style="margin-top:50px;">
+		<nav data-role="navbar" id='DevicesButtons' style='display:none;' class="ui-navbar ui-mini" role="navigation">
+    <ul class="ui-grid-c">
+      <li class="ui-block-d"><a href="RMNewReservation.html"  id='DevicesReserve' data-rel="dialog"  data-corners="false" data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-iconpos="top" data-theme="a" data-inline="true" style='height:40px;' ><span class="ui-btn-inner"><span class="ui-btn-text">Reserve</span><span class="ui-icon ui-icon-star ui-icon-shadow">&nbsp;</span></span></a></li>
+    </ul>
+  </nav>
+
+		<div>
+			<div style="width:50%;float:left">
+			</div>
+			<!--<div data-role="option" style="width:20%;text-align: right;">
+				<select id="calendarview">
+					<option>Table View</option>
+					<option>Calendar View</option>
+				</select>	
+			</div>--!>
+
+			<!--<div id="paginations" style="float: right;width:50%;text-align: right;">
+			</div>--!>
+		</div>
+
+		<!--<fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">
+		    <select name="" id="limitTableRM">
+		        <option value="10">10</option>
+		        <option value="20">20</option>
+		        <option value="50">50</option>
+		    </select>
+		    <select name="" id="select-native-15">
+				<option value="1">Table View</option>
+	            <option value="2">Calendar View</option>
+		    </select>
+		</fieldset>-->
+<div data-role="navbar" id="tabsDevices">
+	<ul id="ulDevices">
+		<li id="liLocal" style="width: auto;"><a href="#liFTab1">Local Devices</a></li>
+		<li id="liManual" style="width: auto;"><a href="#liFTab2">Imported Devices</a></li>
+	</ul>
+		<div style="float: left;margin-top:0.5em;">
+			<table style='width:1000px'>
+				<tr>
+					<td><b>Resource Domain: </b></td>
+					<td style='display:none;'>
+						<select id="domainSelect" class=" optionDes a-btn" style='width:100px;'>
+							<option value="all" selected>All</option>
+						</select>
+					</td>
+					<td id='tdDomain' style='display:none'></td>
+					<td id='tdZone' style='display:none'><b>Resource Zone: </b></td>
+					<td style='display:none'>
+						<select id="zoneSelect" class=" optionDes a-btn" onchange="changeZone(this.value)" style='width:100px'>
+							<option value="" selected>All</option>
+						</select>
+					</td>
+					<td id='tdGroup' style='display:none'><b>Group: </b></td>
+                    <td style='display:none'>
+                        <select id="groupSelect" class=" optionDes a-btn" onchange="changeGroup(this.value)" style='width:100px'>
+							<option value="" selected>All</option>
+                        </select>
+                    </td>
+				</tr>
+			</table>
+	    </div>
+			<br>
+			<br>
+			<br>
+			<br>
+			<table>
+				<tr>
+					<td>
+						<select id="filterDevices"  data-mini="true">
+							<option value="hostName">Hostname</option>
+							<option value="managementip">Management IP</option>
+							<option value="consoleip">Console IP</option>
+							<option value="manufacturer">manufacturer</option>
+							<option value="model">Model</option>
+						</select>
+					</td>
+					<td><input type='text' class='DevicesFilter' id='searchConnectivity'/></td>
+				</tr>
+			</table>
+
+
+			<div id="liFTab1">
+				<a id="rmDevicesSelectAll" href="" style="width:100px;" data-role="button" data-mini="true" data-rel="dialog" >Select All</a>
+			
+		   			<span>Total Matches: <span id="totalMatchesDevices">0</span></span> 
+
+					<div style="overflow:auto;">
+				<div id="rmtab-01"  data-role="content" style="border-top-width: 0px; padding-top: 0px;">
+						<table data-role="table" id="RMDevices-table" data-mode="columntoggle" class="table-stroke ui-body-d ui-shadow ui-responsive" data-column-btn-theme="a" data-column-btn-text="Columns..." data-column-popup-theme="a" data-mini="true">
+							<thead>
+   						 		<tr class="ui-bar-d">
+								    <th>Device ID</th>
+								    <th data-priority="1">HostName</th>
+								    <th data-priority="6">MgmtIP</th>
+      								<th data-priority="6">ConsoleIP</th>
+									<th data-priority="6">Manufacturer</th>
+									<th data-priority="6">Model</th>
+									<th data-priority="6">Connectivity(L1/L2/Open)</th>
+									<th data-priority="6">Domain</th>
+									<th data-priority="6">Zone</th>
+									<th data-priority="6">Group</th>
+									<th data-priority="1">Start Reservation(Date)</th>	
+									<th data-priority="1">Start Reservation(Time)</th>
+									<th data-priority="1">Interval</th>	
+									<th data-priority="1">Iteration</th>
+									<th data-priority="1">Type</th>
+									<th data-priority="1">End Reservation(Date)</th>	
+									<th data-priority="1">End Reservation(Date)</th>	
+								</tr>
+						  	</thead>
+								<tbody></tbody>
+						</table>
+					</div>
+	    		 </div>
+			</div>
+		<div id="liFTab2">
+			<a id="rmImportedDevicesSelectAll" href="" style="width:100px;" data-role="button" data-mini="true" data-rel="dialog" >Select All</a>
+		        <span>Total Matches: <span id="totalMatchesImportedDevices">0</span></span>
+         			<div id="rmtab-02"  data-role="content" style="border-top-width: 0px; padding-top: 0px;">
+						<div style='overflow:auto;'>
+							<table data-role="table" id="RMImportedDevices-table" data-mode="columntoggle" class="table-stroke ui-body-d ui-shadow ui-responsive" data-column-btn-theme="a" data-column-btn-text="Columns..." data-column-popup-theme="a" data-mini="true">
+								<thead>
+   						 			<tr class="ui-bar-d">
+									    <th>Device ID</th>
+									    <th data-priority="1">HostName</th>
+										<th data-priority="6">MgmtIP</th>
+						      			<th data-priority="6">ConsoleIP</th>
+										<th data-priority="6">Manufacturer</th>
+										<th data-priority="6">Model</th>
+										<th data-priority="6">Connectivity(L1/L2/Open)</th>
+										<th data-priority="6">Domain</th>
+										<th data-priority="6">Zone</th>
+										<th data-priority="6">Group</th>
+										<th data-priority="6">Availability Day</th>
+										<th data-priority="6">Availability Time</th>
+										<th data-priority="6">Availability Date</th>
+										<th data-priority="6">Availability</th>
+										<th data-priority="1">Start Reservation(Date)</th>	
+										<th data-priority="1">Start Reservation(Time)</th>
+										<th data-priority="1">Interval</th>	
+										<th data-priority="1">Iteration</th>
+										<th data-priority="1">Type</th>
+										<th data-priority="1">End Reservation(Date)</th>	
+										<th data-priority="1">End Reservation(Time)</th>	
+				    				</tr>
+							  	</thead>
+									<tbody id ='rmImportedDevices'>
+									</tbody>
+							</table>
+						</div>
+	 			    </div>
+				</div>
+</div>
+	<!-- footer -->
+        <div data-role="footer" data-position="fixed" data-theme="c" class="ui-bar" data-position="fixed">
+            <div id="dock">
+                <ul>
+                    <li>
+                        <a href="#"><span>Config</span><img class="configCar2" src="../../img/configeditor.png" alt="[Config Editor]" /></a>
+                    </li>
+                    <li>
+                        <a href="#"><span>Admin</span><img class="adminCar" src="../../img/Admin.png" alt="[Administration]" /></a>
+                    </li>
+                    <li>
+                        <a href="#"><span>RM</span><img class="rmCar" src="../../img/RM.png" alt="[Resource Management]" /></a>
+                    </li>
+                    <li>
+                        <a href="#"><span>PM</span><img class="pmCar" src="../../img/PM.png" alt="[Power Management]" /></a>
+                    </li>
+                    <li>   
+                        <a href="#"><span>Stats</span><img class="statCar" src="../../img/Statistics.png" alt="[Statistics]" /></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+</div>
